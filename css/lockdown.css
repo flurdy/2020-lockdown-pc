@@ -7,3 +7,16 @@ ul.smaller li, li.smaller {
 ul.smallest li, li.smallest {
     font-size: 0.6em;
 }
+.reveal .thumbnails img.half {
+    width: 30%;
+    /* height: 120px; */
+}
+.reveal .thumbnails img.third {
+    width: 22%;
+    height: 190px;
+    margin-top: 5px;
+}
+.reveal .thumbnails img.quart {
+    width: 15%;
+    height: 130px;
+}
