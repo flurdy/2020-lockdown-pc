@@ -9,7 +9,7 @@ ul.smallest li, li.smallest {
 }
 .reveal .thumbnails img.half {
     width: 30%;
-    /* height: 120px; */
+    height: 240px;
 }
 .reveal .thumbnails img.third {
     width: 22%;
