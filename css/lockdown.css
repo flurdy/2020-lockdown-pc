@@ -1,0 +1,9 @@
+li {
+    font-size: 0.8em;
+}
+ul.smaller li, li.smaller {
+    font-size: 0.8em;
+}
+ul.smallest li, li.smallest {
+    font-size: 0.6em;
+}

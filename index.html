@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/lockdown.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
@@ -16,41 +17,333 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
+				<section data-transition="slide-in fade-out">
 					<h2>2020 Lockdown PC Build</h2>
 					<p class="right"><a href="https://twitter.com/flurdy">@flurdy</a></p>
 
 				</section>
-				<section>
+				<section data-transition="fade-in convex-out" data-state="make-it-pop">
 					<h3>Contents</h3>
 					<ol>
-						<!-- <li>Intro</li> -->
-						<li>Why a new PC</li>
-						<li>Specs needed</li>
-						<li>Hardware options</li>
-						<li>Cooling & RGB</li>
-						<li>Research &amp; Shopping</li>
-						<li>Hardware chosen</li>
-						<!-- <li>Planning build</li> -->
-						<!-- <li>Cable management &amp; RGB</li> -->
-						<li>Build</li>
-						<li>OS</li>
-						<li>Software</li>
+						<li class="nofragment">Why a new PC</li>
+						<li class="fragment fade-up">Specs required</li>
+						<li class="fragment fade-up">Mac or Linux</li>
+						<li class="fragment fade-up">Research &amp; Shopping</li>
+						<li class="fragment fade-up">New CPUs &amp; GPUs</li>
+						<li class="fragment fade-up">Hardware list</li>
+						<li class="fragment fade-up">Build</li>
+						<li class="fragment fade-up">OS</li>
+						<li class="fragment fade-up">Software</li>
 					</ol>
-				</section>
-				<section>
-					<h3>Why a new PC</h3>
-					<ul>
-						<li>Macbook Pro was fine before 2020</li>
-					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>AMD Ryzen Zen 3</li>
+							<li>Nvidia 3090, 3080, 3070</li>
+							<li>AMD Radeon 6800XT</li>
+						</ul>
+					</aside>
 
 				</section>
-				<section>
-					<h3></h3>
+				<section data-transition="convex-in convex-out">
+					<h3>Why a new PC</h3>
+					<ul>
+						<li class="fragment fade-in">
+							Macbook Pro was fine before 2020
+							<ul class="smaller">
+								<li class="fragment fade-in">2014 MBP 13" i7 16GB</li>
+							</ul>
+						</li>
+						<li class="fragment fade-up">
+							Pandemic WFH 2020 cooked it
+							<ul class="smaller">
+								<li class="fragment fade-in">Large FP projects</li>
+								<li class="fragment fade-in">Zoom/Slack with Webcam</li>
+								<li class="fragment fade-in">Screen sharing</li>
+								<li class="fragment fade-in">4K screen(s)</li>
+							</ul>
+						</li>
+					</ul>
+					<aside class="notes">
+						<ul>
+							<li>B4: Less FP, small microservices</li>
+							<li>B4: Cloud based kubernetes for dev</li>
+							<li>B4: Test in production</li>
+							<li>B4: Not whole stack locally, Pact integration testing not docker compose</li>
+						</ul>
+						<ul>
+							<li>Now: CPU over 80 degrees</li>
+							<li>Now: 34" ultrawide broke, "upgraded" to 32" 4k, with another on the way</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section data-transition="convex-in convex-out">
+					<h3>Specs required</h3>
+
+					<ul>
+						<li class="fragment">Multi-core CPU</li>
+						<li class="fragment">32GB or more RAM</li>
+						<li class="fragment">Fast SSD with capacity</li>
+						<li class="fragment">Graphics card that handles 4K</li>
+						<li class="fragment">MacOS preferred, but could be Linux</li>
+						<li class="fragment">Not noisy</li>
+						
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>Preferable 8 or more cores</li>
+							<li>32GB ok for now, 64GB preferred long term</li>
+							<li>New NVME disks is lightning fast, esp PCIe 4.0 cards</li>
+						</ul>
+					</aside>
 				
 				</section>
-				<section>
-					<h3></h3>
+
+				<section data-transition="convex-in convex-out">
+					<h3>Mac or Linux</h3>
+
+					<ul>
+						<li class="fragment fade-up">
+							Macbook Pro 13"
+							<ul class="smaller">
+								<li class="fragment fade-left">
+									32GB, 4 core i7, 1TB
+									<ul>
+										<li class="">
+											£2999
+										</li>
+									</ul>
+								</li>
+								<li class="fragment fade-left">
+									+ eGPU &amp; AMD 5700XT
+									<ul>
+										<li class="">
+											£3670
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="fragment fade-up">
+							Macbook Pro 16"
+							<ul class="smaller">
+								<li class="fragment fade-left">
+									64GB, 8 core i9, 8GB GPU, 2TB
+									<ul>
+										<li class="">
+											£4099
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="fragment fade-up">
+							Linux desktop
+							<ul class="smaller">
+								<li class="fragment fade-left">
+									64GB, 12 core Ryzen 9, 3TB
+									<ul>
+										<li class="fragment fade-in highlight-green">
+											&lt; £2000
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="fragment">Don't need portability for a while...</li>
+
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>MBP 13" fits train desks for long commute</li>
+							<li>MBP 13" 32GB is max</li>
+							<li>MBP 13" Need eGPU for 4k. Razer Core X + 5700XT</li>
+							<li>No need for an eGPU with MBP 16"</li>
+							<li>Pandemic, WFH for a good while</li>
+							<li>Post pandemic, may get an MBP 13"...</li>
+						</ul>
+					</aside>
+				
+				</section>
+
+				<section data-transition="convex-in convex-out">
+					<h3>Research &amp; Shopping</h3>
+					
+					<ul>
+						<li class="fragment fade-up">
+							Youtube
+							<ul class="smallest">
+								<li class="fragment fade-left">Bitwit, Gamers Nexus, Linus Tech Tips, Level1Techs</li>
+								<li class="fragment fade-left">JayzTwoCents, Paul's Hardware, KitGuruTech</li>
+								<li class="fragment fade-left">Hardware Canucks, BadSeed Tech, TechBlock</li>
+								<li class="fragment fade-left">Hardware Unboxed, Greg Salazar, Gear Seekers</li>
+								<!-- <li class="nofragment">THe Provoked Prawn, Alpha Gaming, </li> -->
+							</ul>
+						</li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>No longer Computer Shopper, Custom PC and other magazines</li>
+							<li>A lot of youtube and reddit</li>
+						</ul>
+					</aside>
+				
+				</section>
+
+				<section data-transition="convex-in convex-out">
+					<h3>Research &amp; Shopping</h3>
+					
+					<ul>
+						<li class="fragment">
+							Reddit
+							<ul class="smallest fade-up">
+								<li class="fragment fade-right">buildapc, pcmasterrace, linuxhardware</li>
+								<li class="fragment fade-right">Battlestations, AverageBattlestations, ShittyBattlestations</li>
+								<li class="fragment fade-right">AskBattlestations, IkeaPCstations, Workspaces, Macsetups</li>
+								<li class="fragment fade-right">CableManagement, Ryzentosh</li>
+								<li class="fragment fade-right">Amd, Nvidia, Asus, FractalDesignNA, NZXT, CoolerMaster</li>
+							</ul>
+						</li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+						</ul>
+					</aside>
+				
+				</section>
+
+				<section data-transition="convex-in convex-out">
+					<h3>PC Part Picker</h3>
+					
+					<ul class="">
+						<li class="fragment fade-left smaller"><a href="https://www.pcpartpicker.com/">pcpartpicker.com</a></li>
+						<li class="fragment fade-up smallest"><a href="https://uk.pcpartpicker.com/user/flurder/saved/#view=QBLsLk">pcpartpicker.com/user/flurder/saved/#view=QBLsLk</a></li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>Then I mostly bought that from Scan and some from Amazon</li>
+						</ul>
+					</aside>
+				
+				</section>
+
+				<section data-transition="convex-in convex-out">
+					<h3>New CPUs & GPUs</h3>
+					
+					<ul class="">
+						<li>
+							AMD Ryzen Zen 3 CPUs
+							<ul class="smallest">
+								<li>AMD Ryzen 9 5900X</li>
+							</ul>
+						</li>
+						<li>
+							Nvidia Ampere class GPUs
+							<ul class="smallest">
+								<li>3090, 3080, 3070</li>
+							</ul>
+						</li>
+						<li>
+							AMD Big Navi GPUs
+							<ul class="smallest">
+								<li>AMD Radeon 6800XT</li>
+							</ul>
+						</li>
+					</ul>
+
+					<aside class="notes">
+						<ul>
+							<li>You might want to wait</li>
+							<li>Always new tech on the horizon</li>
+							<li>Motherboard support</li>
+							<li>Motherboard needs reflashing</li>
+							<li>Linux kernel support</li>
+							<li>Driver bugs</li>
+							<li>Hardware bugs</li>
+						</ul>
+					</aside>
+				
+				</section>
+
+				<section data-transition="convex-in convex-out">
+					<h3>Hardware list</h3>
+
+					<ul>
+						<li class="fragment fade-left">
+							CPU: AMD Ryzen 9
+							<ul class="smallest">
+								<li>AMD Ryzen 9 3900X 12 core</li>
+							</ul>
+						</li>
+						<li class="fragment fade-left">
+							RAM: 64GB 3600Hz
+							<ul class="smallest">
+								<li>G.Skill Trident Z Neo 4x16GB 3600Hz CL16</li>
+							</ul>
+						</li>
+						<li class="fragment fade-left">
+							Motherboard: AMD B550
+							<ul class="smallest">
+								<li>Asus Rog Strix B550-E Gaming</li>
+							</ul>
+						</li>
+						<li class="fragment fade-left">
+							Graphics card: AMD Radeon 5700XT
+							<ul class="smallest">
+								<li>PowerColor Radeon RX 5700 XT 8 GB Red Devil</li>
+							</ul>
+						</li>
+						<li class="fragment fade-left">
+							Case: Fractal Design Meshify S2
+						</li>
+						<li class="fragment fade-left">
+							Cooler: 280mm AIO water cooler
+							<ul class="smallest">
+								<li>Cooler: Fractal Design Celsius+ 280</li>
+							</ul>
+						</li>
+						<li class="fragment fade-left">
+							Disk: NVME & SSD
+							<ul class="smallest">
+								<li>NVME PCIe 4.0: Seagate FireCuda 520 1TB</li>
+								<li>SSD: Samsung 860 Evo 2TB</li>
+							</ul>
+						</li>
+						<li class="fragment fade-left">
+							Power supply: 850 watts
+							<ul class="smallest">
+								<li>BeQuiet Straight Power 11 850 watts</li>
+							</ul>
+						</li>
+
+					</ul>
+					<aside class="notes">
+						<ul>
+							<li>CPU: 12 core means 24 virtual cores</li>
+							<li>Motherboard: B550 has PCIe 4 for fast disks but fanless</li>
+							<li>Graphics card: Can later be used in eGPU with Macbook</li>
+							<li>Case: Replaced all the fans with PWM RGB fans</li>
+						</ul>
+					</aside>
+				
+				</section>
+				
+				<section data-transition="convex-in convex-out">
+					<h3>Build</h3>
+				
+				</section>
+				<section data-transition="convex-in convex-out">
+					<h3>OS</h3>
+				
+				</section>
+				<section data-transition="convex-in convex-out">
+					<h3>Software</h3>
 				
 				</section>
 			</div>
