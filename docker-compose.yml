@@ -1,0 +1,9 @@
+version: '3'
+services:
+  reveal:
+    image: flurdy/2020-lockdown-pc
+    ports:
+      - "8123:8000"
+    volumes:
+      - "./:/home/node/app"
+      - "/home/node/app/node_modules"

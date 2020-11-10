@@ -9,6 +9,23 @@
 
 [github.com/flurdy/2020-lockdown-pc](https://github.com/flurdy/2020-lockdown-pc)
 
+### Build
+
+Build Node app if needed:
+
+`docker build t flurdy/2020-lockdown-pc .`
+
+### Run
+
+Either as a static web pages  
+
+`open index.html`
+
+Or as a Node app with speakers notes and timers.
+This uses docker-compose to run images build above.
+
+`docker-compose up -d`
+
 
 ### Presentation software
 
