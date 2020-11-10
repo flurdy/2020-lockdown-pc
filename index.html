@@ -50,10 +50,13 @@
 				<section data-transition="fade-in convex-out">
 					<h3>Contents</h3>
 					<ol>
-						<li class="nofragment">Great time to build</li>
-						<li class="nofragment fade-up">Why a new PC</li>
-						<li class="nofragment fade-up">Specs required</li>
-						<li class="nofragment fade-up">Mac or Linux</li>
+						<!-- <li class="nofragment">Great time to build</li> -->
+						<li class="nofragment fade-up">Why a new PC
+							<ul>
+								<li class="nofragment fade-up">Specs required</li>
+								<li class="nofragment fade-up">Mac or Linux</li>
+							</ul>
+						</li>
 						<li class="nofragment fade-up">Research &amp; Shopping
 							<ul>
 								<li class="nofragment fade-up">New CPUs &amp; GPUs</li>
@@ -61,8 +64,11 @@
 						</li>
 						<li class="nofragment fade-up">Parts list</li>
 						<li class="nofragment fade-up">Build</li>
-						<li class="nofragment fade-up">Operating System</li>
-						<li class="nofragment fade-up">Software</li>
+						<li class="nofragment fade-up">Operating System
+							<ul>
+								<li class="nofragment fade-up">Software</li>
+							</ul>
+						</li>
 					</ol>
 
 					<aside class="notes">
@@ -71,7 +77,7 @@
 							<li>Specs: What I needed</li>
 							<li>Mac or Linux: A big question, expensive question</li>
 							<li>New CPUS & GPUS: AMD Ryzen Zen 3, Nvidia 3090, 3080, 3070, AMD Radeon 6800XT</li>
-							<li>Hardware: Details</li>
+							<li>Parts list: Details and suggested alternatives</li>
 							<li>Build: Some photos, advice and mistakes </li>
 							<li>OS: Linux. Pop!_OS</li>
 							<li>Software: If get time, a quick rundown of setting up a WFH dev env</li>
@@ -80,143 +86,145 @@
 
 				</section>
 				<section data-transition="convex-in convex-out">
-					<h3>Why a new PC</h3>
-					<ul>
-						<li class="fragment fade-in" data-fragment-index="1">
-							Macbook Pro was fine before 2020
-							<ul class="smaller">
-								<li class="fragment fade-in" data-fragment-index="2">2014 MBP 13" i7 16GB</li>
-							</ul>
-						</li>
-						<li class="fragment fade-up" data-fragment-index="3">
-							Pandemic WFH 2020 cooked it
-							<ul class="smaller">
-								<li class="fragment fade-in" data-fragment-index="4">Large FP projects</li>
-								<li class="fragment fade-in" data-fragment-index="4">Zoom/Slack with Webcam</li>
-								<li class="fragment fade-in" data-fragment-index="4">Screen sharing</li>
-								<li class="fragment fade-in" data-fragment-index="4">4K screen(s)</li>
-							</ul>
-						</li>
-					</ul>
-					<aside class="notes">
+					<section data-transition="convex-in convex-out">
+						<h3>Why a new PC</h3>
 						<ul>
-							<li>B4: Less FP, small microservices</li>
-							<li>B4: Cloud based kubernetes for dev</li>
-							<li>B4: Test in production</li>
-							<li>B4: Not whole stack locally, Pact integration testing not docker compose</li>
+							<li class="fragment fade-in" data-fragment-index="1">
+								Macbook Pro was fine before 2020
+								<ul class="smaller">
+									<li class="fragment fade-in" data-fragment-index="2">2014 MBP 13" i7 16GB</li>
+								</ul>
+							</li>
+							<li class="fragment fade-up" data-fragment-index="3">
+								Pandemic WFH 2020 cooked it
+								<ul class="smaller">
+									<li class="fragment fade-in" data-fragment-index="4">Large FP projects</li>
+									<li class="fragment fade-in" data-fragment-index="4">Zoom/Slack with Webcam</li>
+									<li class="fragment fade-in" data-fragment-index="4">Screen sharing</li>
+									<li class="fragment fade-in" data-fragment-index="4">4K screen(s)</li>
+								</ul>
+							</li>
 						</ul>
+						<aside class="notes">
+							<ul>
+								<li>B4: Less FP, small microservices</li>
+								<li>B4: Cloud based kubernetes for dev</li>
+								<li>B4: Test in production</li>
+								<li>B4: Not whole stack locally, Pact integration testing not docker compose</li>
+							</ul>
+							<ul>
+								<li>Now: CPU over 80 degrees</li>
+								<li>Now: 34" ultrawide broke, "upgraded" to 32" 4k, with another on the way</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section data-transition="convex-in convex-out">
+						<h3>Specs required</h3>
+
 						<ul>
-							<li>Now: CPU over 80 degrees</li>
-							<li>Now: 34" ultrawide broke, "upgraded" to 32" 4k, with another on the way</li>
+							<li class="fragment">Multi-core CPU</li>
+							<li class="fragment">32GB+ RAM</li>
+							<li class="fragment">Fast 1TB+ SSD</li>
+							<li class="fragment">Graphics card that handles 4K &amp; games</li>
+							<li class="fragment">MacOS preferred, but could be Linux</li>
+							<li class="fragment">Not noisy</li>
+							
 						</ul>
-					</aside>
-				</section>
 
-				<section data-transition="convex-in convex-out">
-					<h3>Specs required</h3>
+						<aside class="notes">
+							<ul>
+								<li>Work and play</li>
+								<li>Preferable 8 or more cores</li>
+								<li>32GB ok for now, 64GB preferred long term</li>
+								<li>New NVME disks is lightning fast, esp PCIe 4.0 cards</li>
+							</ul>
+						</aside>
+					
+					</section>
 
-					<ul>
-						<li class="fragment">Multi-core CPU</li>
-						<li class="fragment">32GB+ RAM</li>
-						<li class="fragment">Fast 1TB+ SSD</li>
-						<li class="fragment">Graphics card that handles 4K &amp; games</li>
-						<li class="fragment">MacOS preferred, but could be Linux</li>
-						<li class="fragment">Not noisy</li>
-						
-					</ul>
+					<section data-transition="convex-in convex-out">
+						<h3>Mac or Linux</h3>
 
-					<aside class="notes">
 						<ul>
-							<li>Work and play</li>
-							<li>Preferable 8 or more cores</li>
-							<li>32GB ok for now, 64GB preferred long term</li>
-							<li>New NVME disks is lightning fast, esp PCIe 4.0 cards</li>
+							<li class="fragment fade-up">
+								2020 Macbook Pro 13"
+								<ul class="smaller">
+									<li class="fragment fade-left">
+										32GB, quad core i7, 2TB
+										<ul>
+											<li class="larger">
+												£2999
+											</li>
+										</ul>
+									</li>
+									<li class="fragment fade-left">
+										+ eGPU &amp; AMD 5700XT
+										<ul>
+											<li class="larger">
+												£3670
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="fragment fade-up">
+								2020 Macbook Pro 16"
+								<ul class="smaller">
+									<li class="nofragment fade-left">
+										64GB, 8 core i9, 8GB GPU, 2TB
+										<ul>
+											<li class="larger">
+												£4099
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="fragment fade-up">
+								2019 Mac Mini
+								<ul class="smaller">
+									<li class="nofragment fade-left">
+										64GB, 8 core i7, 2TB, eGPU, 5700XT
+										<ul>
+											<li class="larger">
+												£3570
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="fragment fade-up">
+								Linux desktop
+								<ul class="smaller">
+									<li class="fragment fade-left">
+										64GB, 12 core Ryzen 9, 3TB
+										<ul>
+											<li class="nofragment fade-in larger">
+												&lt; £2000
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="fragment smaller">Don't need a laptop for a while</li>
+
 						</ul>
-					</aside>
-				
-				</section>
 
-				<section data-transition="convex-in convex-out">
-					<h3>Mac or Linux</h3>
-
-					<ul>
-						<li class="fragment fade-up">
-							2020 Macbook Pro 13"
-							<ul class="smaller">
-								<li class="fragment fade-left">
-									32GB, quad core i7, 2TB
-									<ul>
-										<li class="larger">
-											£2999
-										</li>
-									</ul>
-								</li>
-								<li class="fragment fade-left">
-									+ eGPU &amp; AMD 5700XT
-									<ul>
-										<li class="larger">
-											£3670
-										</li>
-									</ul>
-								</li>
+						<aside class="notes">
+							<ul>
+								<li>MBP 13" fits train desks for long commute</li>
+								<li>MBP 13" 32GB is max</li>
+								<li>MBP 13" Need eGPU for 4k. Razer Core X + 5700XT</li>
+								<li>No need for an eGPU with MBP 16"</li>
+								<li>Got quite a beefy PC for as little as £1200</li>
+								<li>At £2000 I have maxed out a lot of specs</li>
+								<li>Pandemic, WFH for a good while</li>
+								<li>Post pandemic, may get an MBP 13"...</li>
 							</ul>
-						</li>
-						<li class="fragment fade-up">
-							2020 Macbook Pro 16"
-							<ul class="smaller">
-								<li class="fragment fade-left">
-									64GB, 8 core i9, 8GB GPU, 2TB
-									<ul>
-										<li class="larger">
-											£4099
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li class="fragment fade-up">
-							2019 Mac Mini
-							<ul class="smaller">
-								<li class="nofragment fade-left">
-									64GB, 8 core i7, 2TB, eGPU, 5700XT
-									<ul>
-										<li class="larger">
-											£3570
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li class="fragment fade-up">
-							Linux desktop
-							<ul class="smaller">
-								<li class="fragment fade-left">
-									64GB, 12 core Ryzen 9, 3TB
-									<ul>
-										<li class="nofragment fade-in larger">
-											&lt; £2000
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li class="fragment smaller">Don't need a laptop for a while</li>
-
-					</ul>
-
-					<aside class="notes">
-						<ul>
-							<li>MBP 13" fits train desks for long commute</li>
-							<li>MBP 13" 32GB is max</li>
-							<li>MBP 13" Need eGPU for 4k. Razer Core X + 5700XT</li>
-							<li>No need for an eGPU with MBP 16"</li>
-							<li>Got quite a beefy PC for as little as £1200</li>
-							<li>At £2000 I have maxed out a lot of specs</li>
-							<li>Pandemic, WFH for a good while</li>
-							<li>Post pandemic, may get an MBP 13"...</li>
-						</ul>
-					</aside>
-				
+						</aside>
+					
+					</section>
 				</section>
 
 				<section data-transition="convex-in convex-out">
@@ -259,9 +267,12 @@
 					<section data-transition="convex-in convex-out">
 						<h3>PC Part Picker</h3>
 						
+						<div class="thumbnails">
+							<img src="img/pcpartpicker.png" alt="pcpartpicker website" class="half">
+						</div>
+
 						<ul class="">
 							<li class="fragment fade-left smaller"><a href="https://uk.pcpartpicker.com/">pcpartpicker.com</a></li>						
-							<!-- <li class="fragment fade-up smallest"><a href="https://uk.pcpartpicker.com/user/flurder/saved/#view=QBLsLk">My parts list</a></li> -->
 						</ul>
 
 						<aside class="notes">
@@ -583,6 +594,8 @@
 						</div>
 
 						<ul>
+							<li class="smallest">PWM</li>
+							<li class="smallest">RGB</li>
 							<li class="smallest">8 140mm fans</li>
 							<li class="smallest">3 intake fans at the front, 1 at the bottom, 1 via PSU</li>
 							<li class="smallest">1 exhaust fan at the back and 2 with the top radiator</li>
